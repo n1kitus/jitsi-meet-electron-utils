@@ -129,6 +129,20 @@ class RemoteControl {
      * @param {string} sourceId - The source id of the desktop sharing stream.
      */
     _start(id, sourceId) {
+        // First check if access was granted.
+        // FIXME: have a better API for this.
+        const { contentWindow } = this._iframe;
+
+        if (!contentWindow.APP.remoteControl.receiver._controller) {
+            this._sendMessage({
+                error: 'Remote control access not granted',
+                id,
+                type: 'response'
+            });
+
+            return;
+        }
+
         this._displayMetricsChangeListener = () => {
             this._setDisplayMetrics(sourceId);
         };
