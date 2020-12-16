@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "test": "TESTING=true mocha",
     "validate": "npm ls",
-    "install": "prebuild-install || node-gyp rebuild"
+    "install": "prebuild-install"
   },
   "pre-commit": [
     "lint"
