@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "TESTING=true mocha",
-    "validate": "npm ls",
-    "install": "prebuild-install"
+    "validate": "npm ls"
   },
   "pre-commit": [
     "lint"
@@ -29,7 +28,6 @@
     "mac-screen-capture-permissions": "^1.1.0",
     "nan": "^2.14.0",
     "postis": "^2.2.0",
-    "prebuild-install": "^5.3.0",
     "semver": "7.1.1",
     "jitsi-meet-logger": "github:jitsi/jitsi-meet-logger#v1.0.0"
   },
@@ -37,7 +35,6 @@
     "eslint": ">=3",
     "eslint-plugin-jsdoc": "*",
     "mocha": "^8.2.1",
-    "prebuild": "^9.1.1",
     "precommit-hook": "3.0.0"
   }
 }
